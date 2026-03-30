@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Luminous - 智能移动端用药助手</title>
+
+    <!-- 核心 CSS -->
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <!-- 使用白底清爽主题主题 (可以替换成 black, league, sky 等) -->
+    <link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+    <!-- 代码高亮 -->
+    <link rel="stylesheet" href="dist/plugin/highlight/monokai.css">
+
+    <!-- 自定义基础样式 -->
+    <style>
+        /* 全局字体设置，推荐微软雅黑与思源黑体 */
+        .reveal {
+            font-family: "Microsoft YaHei", "Source Han Sans SC", "PingFang SC", sans-serif;
+            color: #333333;
+        }
+        
+        /* 标题统一风格 */
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: "Microsoft YaHei", "Source Han Sans SC", "PingFang SC", sans-serif;
+            text-transform: none; /* 防止英文字母全部变成大写 */
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* 隐藏滚动条 */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* 页面居中小组件盒模型 */
+        .custom-card {
+            background: #ffffff;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 强调色文字 */
+        .text-primary { color: #3498db; }
+        .text-success { color: #2ecc71; }
+        .text-warning { color: #f39c12; }
+        .text-danger  { color: #e74c3c; }
+    </style>
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- 第1页：封面页 -->
+            <section data-transition="fade">
+                <!-- 可以替换您的Logo图片 -->
+                <img src="https://via.placeholder.com/120x120/3498db/ffffff?text=L" alt="Logo" style="border-radius: 20%; border: none; box-shadow: 0 4px 15px rgba(52,152,219,0.3); margin-bottom: 20px;">
+                <h1>Luminous</h1>
+                <h3 style="color: #666; font-weight: normal;">智能移动端用药助手</h3>
+                <p style="margin-top: 40px; font-size: 0.8em; color: #888;">
+                    AI赋能 · 守护健康
+                </p>
+                <!-- 提示指北 -->
+                <p style="font-size: 0.5em; color: #aaa; margin-top: 50px;">
+                    【请使用键盘 ⬅️ ➡️ 或 点击屏幕右下角箭头翻页】
+                </p>
+            </section>
+
+            <!-- 第2页：目录页 -->
+            <section data-transition="slide">
+                <h2>功能目录</h2>
+                <hr style="border: none; border-top: 3px solid #3498db; width: 60px; margin: 20px auto 40px auto; border-radius: 2px;">
+                
+                <!-- 使用段落和列表排版目录 -->
+                <div style="text-align: left; width: 60%; margin: 0 auto; line-height: 2;">
+                    <!-- fragment 属性实现点击逐步淡入效果 -->
+                    <p class="fragment fade-up">01 / <span class="text-primary">药品识别与查询</span></p>
+                    <p class="fragment fade-up">02 / <span class="text-primary">AI 深度分析解读</span></p>
+                    <p class="fragment fade-up">03 / <span class="text-primary">每日提醒与打卡</span></p>
+                    <p class="fragment fade-up">04 / <span class="text-primary">全栈技术架构</span></p>
+                </div>
+            </section>
+
+            <!-- 第3页：内容页1 - 药品识别 -->
+            <section data-transition="convex">
+                <h2>01. 智能药品识别</h2>
+                <p style="font-size: 0.7em; color: #7f8c8d; margin-bottom: 40px;">告别繁琐输入，拍照即刻获取药品详情</p>
+                
+                <div style="display: flex; align-items: center; justify-content: center; gap: 40px;">
+                    <div style="flex: 1; text-align: left; padding-left: 20px;">
+                        <ul style="font-size: 0.8em; line-height: 1.8; color: #444;">
+                            <li>📷 <b>拍照识别：</b> 自动提取药品名称</li>
+                            <li>🔍 <b>多重回查：</b> 支持候选词精准校验</li>
+                            <li>📖 <b>信息完备：</b> 涵盖用法用量与禁忌症</li>
+                            <li>📁 <b>记录沉淀：</b> 识别相册结果云端漫游</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1;">
+                        <!-- 占位图链接，可直接替换为您的项目截图 -->
+                        <img src="https://via.placeholder.com/400x300/f8f9fa/3498db?text=Medicine+Scan+UI" alt="智能识别截图" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第4页：内容页2 - AI 解读 -->
+            <section data-transition="zoom">
+                <h2>02. AI 赋能的深度辅助</h2>
+                <hr style="border: none; border-top: 3px solid #2ecc71; width: 60px; margin: 20px auto 30px auto;">
+                
+                <div class="custom-card" style="background: rgba(46, 204, 113, 0.05); border-color: rgba(46, 204, 113, 0.2);">
+                    <p style="font-size: 0.85em; color: #27ae60; font-weight: bold; margin-bottom: 30px;">
+                        无缝兼容豆包大模型与火山方舟，提供全时段用药辅助。
+                    </p>
+                    <div style="display: flex; justify-content: space-around; font-size: 0.7em; color: #555;">
+                        <div class="fragment fade-up" data-fragment-index="1">
+                            <!-- 图标占位图 -->
+                            <img src="https://via.placeholder.com/100/ecf0f1/27ae60?text=AI" style="border-radius: 50%; width: 90px; margin-bottom: 15px;">
+                            <p><b>安全预警</b><br>禁忌与副作用</p>
+                        </div>
+                        <div class="fragment fade-up" data-fragment-index="2">
+                            <img src="https://via.placeholder.com/100/ecf0f1/27ae60?text=Chat" style="border-radius: 50%; width: 90px; margin-bottom: 15px;">
+                            <p><b>疑问解答</b><br>个性化问诊</p>
+                        </div>
+                        <div class="fragment fade-up" data-fragment-index="3">
+                            <img src="https://via.placeholder.com/100/ecf0f1/27ae60?text=Report" style="border-radius: 50%; width: 90px; margin-bottom: 15px;">
+                            <p><b>用药解读</b><br>通俗化科普</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第5页：内容页3 - 每日提醒打卡 -->
+            <section data-transition="slide">
+                <h2>03. 每日提醒与本地打卡</h2>
+                <p style="font-size: 0.7em; color: #7f8c8d; margin-bottom: 40px;">按时吃药，从未如此简单</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding: 0 40px;">
+                    <div class="custom-card">
+                        <h4 class="text-warning" style="margin-bottom: 15px;">⏰ 精准提醒</h4>
+                        <p style="font-size: 0.7em; color: #666; line-height: 1.6;">
+                            设置自定义用药计划，<br>每天定时推送服药通知。
+                        </p>
+                    </div>
+                    <div class="custom-card">
+                        <h4 class="text-primary" style="margin-bottom: 15px;">✅ 健康打卡</h4>
+                        <p style="font-size: 0.7em; color: #666; line-height: 1.6;">
+                            用药记录一键打卡状态落盘，<br>随时回看历史疗程不遗漏。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第6页：内容页4 - 技术架构 -->
+            <section data-transition="slide-in fade-out">
+                <h2>04. 全栈技术支撑</h2>
+                
+                <div style="background: #282c34; border-radius: 12px; padding: 30px; text-align: left; color: #abb2bf; font-family: monospace; font-size: 0.65em; line-height: 2; margin-top: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <p><span style="color: #c678dd;">const</span> <span style="color: #e5c07b;">luminousStack</span> = {</p>
+                    <p style="margin-left: 20px;">
+                        <span style="color: #61afef;">"App"</span>: <span style="color: #98c379;">"Flutter (Dart) / 深浅色多主题UI"</span>, <br>
+                        <span style="color: #61afef;">"Backend"</span>: <span style="color: #98c379;">"Node.js + TypeScript + Express"</span>, <br>
+                        <span style="color: #61afef;">"Database"</span>: <span style="color: #98c379;">"MongoDB (User) + MySQL (Medicine)"</span>, <br>
+                        <span style="color: #61afef;">"Auth"</span>: <span style="color: #98c379;">"JWT 双 Token 机制"</span>,
+                    </p>
+                    <p>};</p>
+                </div>
+                <p class="fragment fade-up" style="font-size: 0.5em; color: #888; margin-top: 20px;">App 与 App Backend 独立部署，提供高效的前后端分离联调能力。</p>
+            </section>
+
+            <!-- 第7页：结尾总结页 -->
+            <section data-transition="zoom">
+                <h1 style="color: #3498db; font-size: 3em; margin-bottom: 0;">Thanks!</h1>
+                <h3 style="margin-top: 20px; color: #2c3e50;">Luminous · 照亮健康之路</h3>
+                
+                <div style="margin-top: 60px;">
+                    <p style="font-size: 0.8em; color: #555;">让医疗健康触手可及</p>
+                    <!-- 图标及指引 -->
+                    <p style="font-size: 0.6em; color: #aaa;">
+                        <span style="margin-right: 20px;">👨‍💻 Code base: Flutter / Node.js</span>
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- 引入 reveal.js 核心脚本 -->
+    <script src="dist/reveal.js"></script>
+
+    <!-- 引入插件 (可按需删减) -->
+    <!--
+    <script src="dist/plugin/notes/notes.js"></script>
+    <script src="dist/plugin/markdown/markdown.js"></script>
+    -->
+    <script src="dist/plugin/highlight/highlight.js"></script>
+    
+    <script>
+        // 初始化 reveal.js
+        Reveal.initialize({
+            // 是否在右下角展示控制路由（箭头）
+            controls: true,
+            // 是否显示当前幻灯片的进度条
+            progress: true,
+            // 将幻灯片的当前页数推入 URL 的 hash 段
+            hash: true,
+            // 垂直居中展示页面内容
+            center: true,
+            // 过渡效果: none/fade/slide/convex/concave/zoom
+            transition: 'slide', 
+            // 切换动画延迟时间
+            transitionSpeed: 'default',
+            // 页面键盘切换控制
+            keyboard: true,
+
+            // 插件配置（启用了代码高亮）
+            plugins: [ RevealHighlight ]
+        });
+    </script>
+</body>
+</html>
